@@ -1,0 +1,14 @@
+D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\NetCore1.deps.json
+D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\NetCore1.runtimeconfig.json
+D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\NetCore1.runtimeconfig.dev.json
+D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\NetCore1.dll
+D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\NetCore1.pdb
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.csprojAssemblyReference.cache
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.csproj.CoreCompileInputs.cache
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.RazorAssemblyInfo.cache
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.RazorAssemblyInfo.cs
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.AssemblyInfoInputs.cache
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.AssemblyInfo.cs
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.RazorTargetAssemblyInfo.cache
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.dll
+D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\NetCore1.pdb
