@@ -149,6 +149,9 @@ namespace NetCore1.Controllers
             {
                 return NotFound();
             }
+            string direc = Path.Combine(Directory.GetCurrentDirectory() + "/wwwroot/UserFiles/" + alumnos.id + "/");
+            Directory.Delete(direc, true);
+
             // No usa un DELETE, se usa un UPDATE con un campo especial en la base de datos
             alumnos.estado = "Suspendido";
             _context.Alumnos.Update(alumnos);
