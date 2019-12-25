@@ -10,7 +10,7 @@ En este proyecto encontraras temas como
   - Manejo de **archivos y carpetas**.
     - User_Files :file_folder:
       - ID_Alumno :file_folder:
-        - Imagen: milky_way:   
+        - Imagen: :milky_way:   
 ## Próximo a mejorar
       Generar códigos QR y IDs únicos.
       Validación de datos.
