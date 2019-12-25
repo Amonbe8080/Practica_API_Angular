@@ -47,8 +47,7 @@ Se usa una consulta con **Inner Join** para unir los resultados de varias tablas
  Además se **borrará la carpeta** establecida **para guardar las imágenes de dicho alumno**.
  ![Imagen Postman usando Delete](https://github.com/Amonbe8080/Practica_API_Angular/blob/backend/Screenshots/Delete.png)
  
- 
- #Finalizamos con el consumo de [PokéApi](https://pokeapi.co/) :octocat:
+# Finalizamos con el consumo de [PokéApi](https://pokeapi.co/) :octocat:
   El API originalmente nos **traerá todos estos datos**.
  ![Imagen Postman usando Get al API](https://github.com/Amonbe8080/Practica_API_Angular/blob/backend/Screenshots/Get_Pokemon_Original.png)
  
