@@ -55,5 +55,5 @@ Se usa una consulta con **Inner Join** para unir los resultados de varias tablas
  ![Imagen Postman usando Get a mi API](https://github.com/Amonbe8080/Practica_API_Angular/blob/backend/Screenshots/Get_Pokemon.png)
  
  Otra forma que implemente es usar una **variable de tipo Dynamic**, con esto **no tengo que crear un Modelo** y puedo leer los datos de una manera familiar para mí.
- ![Imagen VS](https://github.com/Amonbe8080/Practica_API_Angular/blob/backend/Screenshots/Dynamic.png)
+ ![Imagen VS](https://github.com/Amonbe8080/Practica_API_Angular/blob/backend/Screenshots/dynamic.png)
  
