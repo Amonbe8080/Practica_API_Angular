@@ -3,7 +3,6 @@ D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\PracticaBackend.runtimeconfig.json
 D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\PracticaBackend.runtimeconfig.dev.json
 D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\PracticaBackend.dll
 D:\NetCore1\NetCore1\bin\Debug\netcoreapp2.1\PracticaBackend.pdb
-D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\PracticaBackend.csprojAssemblyReference.cache
 D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\PracticaBackend.csproj.CoreCompileInputs.cache
 D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\PracticaBackend.RazorAssemblyInfo.cache
 D:\NetCore1\NetCore1\obj\Debug\netcoreapp2.1\PracticaBackend.RazorAssemblyInfo.cs
