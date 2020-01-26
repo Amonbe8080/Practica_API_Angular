@@ -1,0 +1,217 @@
+
+<app-cabecera></app-cabecera>
+
+<section class="px-md-5 mx-md-5 text-center text-lg-left">
+  <div class="row">
+
+    <!-- Lado Izquierdo (Formulario) -->
+    <div class="col-md-6 h-100">
+      <p class="h3 mb-4 indigo-text">Únete a Plax y construye tu futuro.</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate numquam corporis nam delectus quae minima
+        sed amet voluptas sint alias eius non excepturi, fuga impedit atque provident enim ad praesentium.
+        <a href="">Registrarme con <i class="fab fa-google"></i>oogle </a>
+      </p>
+      <form class="text-center" [formGroup]="inscripcionForm" (ngSubmit)="enviar(inscripcionForm.value)" enctype="multipart/form-data">
+
+        <!-- Documento de Identidad -->
+        <label>Documento de Identidad (*)</label>
+        <input type="number" maxlength="4" formControlName="id" class="form-control" placeholder="Máximo 11 Caracteres" 
+        [ngClass]="{'border-danger': id.invalid, 'border-success': id.valid, 'border-light': !id.touched  }">
+
+        <!-- Validacion de Documento de Identidad -->
+        <div *ngIf="id.invalid && (id.touched || id.dirty)" class="text-danger">
+          <p *ngIf="id.hasError('required')">Debes ingresar un documento valido</p>
+          <p *ngIf="id.hasError('minlength')">Debe tener mas de 10 caracteres numericos</p>
+          <p *ngIf="id.hasError('maxlength')">Debe tener menos de 12 caracteres numericos</p>
+          <p *ngIf="id.hasError('pattern')">Este campo solo debe tener números</p>
+        </div>
+
+        <div class="form-row mb-4">
+          <div class="col">
+            <!-- Nombre -->
+            <label>Nombres (*)</label>
+            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombres"
+            [ngClass]="{'border-danger': nombre.invalid, 'border-success': nombre.valid, 'border-light': !nombre.touched  }">
+
+            <!-- Validacion de Nombre -->
+            <div *ngIf="nombre.touched && nombre.invalid" class="text-danger">
+              <p *ngIf="nombre.hasError('required')">Debes ingresar un nombre</p>
+              <p *ngIf="nombre.hasError('pattern')">Este campo solo debe contener letras</p>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Apellidos -->
+            <label>Apellidos (*)</label>
+            <input type="text" formControlName="apellido" class="form-control" placeholder="Apellidos"
+            [ngClass]="{'border-danger': apellido.invalid, 'border-success': apellido.valid, 'border-light': !apellido.touched  }">
+
+            <!-- Validacion de Apellidos -->
+            <div *ngIf="apellido.touched && apellido.invalid" class="text-danger border-danger">
+              <p *ngIf="apellido.hasError('required')">Debes ingresar tus apellidos</p>
+              <p *ngIf="apellido.hasError('pattern')">Este campo solo debe contener letras</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row mb-4">
+          <div class="col">
+            <!-- Edad -->
+            <label>Edad (*)</label>
+            <input type="number" formControlName="edad" class="form-control" placeholder="Edad"
+            [ngClass]="{'border-danger': edad.invalid, 'border-success': edad.valid, 'border-light': !edad.touched  }">
+
+            <!-- Validacion de edad -->
+            <div *ngIf="edad.touched && edad.invalid" class="text-danger">
+              <p *ngIf="edad.hasError('required')">Debes ingresar una edad</p>
+              <p *ngIf="edad.hasError('min')">Debes tener mas de 6 años</p>
+              <p *ngIf="edad.hasError('max')">Debes tener menos de 150 años</p>
+              <p *ngIf="edad.hasError('pattern')">Este campo solo debe tener números</p>
+            </div>
+
+          </div>
+          <div class="col">
+            <!-- Genero -->
+            <label>Género (*)</label><br>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" class="custom-control-input" id="mujer" value="F" formControlName="genero" checked>
+              <label class="custom-control-label" for="mujer">Mujer</label>
+            </div>
+
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" class="custom-control-input" id="hombre" value="M" formControlName="genero">
+              <label class="custom-control-label" for="hombre">Hombre</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row mb-4">
+            <div class="col">
+              <div class="mb-4 text-center indigo-text h6">
+                <label>Comparte tu imagen a los demas</label>
+                <img [src]="ImageURL" class="bg-white mb-3" width="200" height="200" alt="example placeholder avatar">    
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text indigo-text h6" id="inputGroupFileAddon01"><i class="far fa-image"></i></span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" accept=".jpg, .jpeg, .png"  id="inputGroupFile01" lang="es" (change)="UpdateControls($event)">
+                      <label class="custom-file-label" for="inputGroupFile01">{{ FileName }}</label>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col indigo-text h6">
+              <label>¿Como te describes?</label>
+              <textarea name="" id="" cols="30" rows="10" placeholder="Ej: Soy una persona extrovertida, me gusta el compartir con los demas...." class="form-control"></textarea>
+            </div>
+        </div>
+
+        <!-- Si el servidor esta funcionando -->
+        <ng-container *ngIf="cargarDatos; else error">
+
+          <!-- Carrera Técnica -->
+          <label>Carrera Técnica (*)</label><br>
+          <select class="browser-default custom-select" formControlName="codigo_carrera" required>
+            <option [ngValue]="null" disabled>¿Que Quieres Estudiar?</option>
+            <option *ngFor="let showCar of carreras" value="{{ showCar.codigo_carrera }}">{{ showCar.nombre_carrera }}
+            </option>
+          </select>
+
+          <!-- Validacion de Carrera Técnica -->
+          <div *ngIf="carrera.touched && carrera.invalid" class="text-danger mb-4">
+            <p *ngIf="carrera.hasError('required')">Debes seleccionar una Carrera Técnica</p>
+          </div>
+
+          <!-- Centro de Formación -->
+          <label>Centro de Formación (*)</label><br>
+          <select class="browser-default custom-select" formControlName="codigo_centro" required>
+            <option [ngValue]="null" disabled>¿Donde Quieres Estudiar?</option>
+            <option *ngFor="let showCe of centros" value="{{ showCe.codigo_centro }}">{{ showCe.nombre_centro_estudio }}
+            </option>
+          </select>
+
+          <!-- Validacion de Centro de Formación -->
+          <div *ngIf="centro.touched && centro.invalid" class="text-danger mb-4">
+            <p *ngIf="centro.hasError('required')">Debes seleccionar un Centro de Formación</p>
+          </div>
+
+          <!-- Boton -->
+          <button class="btn btn-info btn-md ml-0 peach-gradient mt-3 col-md-7" [disabled]="inscripcionForm.invalid"
+          type="submit">Inscribirme</button>
+
+          <p>¿Ya tienes una cuenta?</p>
+          <a routerLink="/">Iniciar Sesión</a>
+        </ng-container>
+
+        <!-- Si el servidor no esta funcionando -->
+        <ng-template #error><app-not-content></app-not-content></ng-template>
+
+      </form>
+    </div>
+    <!-- Fin Lado Izquierdo (Formulario) -->
+
+    <!-- Lado Derecho -->
+    <div class="col-md-6">
+
+      <!-- Video -->
+      <div class="view">
+        <video class="video-fluid embed-responsive embed-responsive-21by9 rounded mb-0  align-middle" autoplay loop
+          muted>
+          <source src="../../../assets/sus.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <!-- Tarjetas -->
+      <div class="col-md-12 mt-2">
+
+        <!-- Tarjeta de Carreras -->
+        <div class=" mb-4">
+          <a routerLink="/carreras" class="card hoverable">
+            <div class="card-body">
+              <div class="media">
+                <span
+                  class="card-img-100 d-inline-flex justify-content-center align-items-center rounded-circle indigo darken-2 mr-4">
+                  <i class="fas fa-rocket orange-text fa-2x"></i>
+                </span>
+                <div class="media-body">
+                  <h5 class="indigo-text mb-3">Estudia las carreras del Futuro</h5>
+                  <p class="font-weight-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nesciunt non molestiae aspernatur at porro! Eaque, aliquam illo error, amet laudantium quam, a
+                    rchitecto ad.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Fin Tarjeta de Carreras -->
+
+        <!-- Tarjeta de Centros -->
+        <div class="mb-4">
+          <a routerLink="/centro" class="card hoverable">
+            <div class="card-body">
+              <div class="media">
+                <span
+                  class="card-img-100 d-inline-flex justify-content-center align-items-center rounded-circle indigo darken-2 mr-4">
+                  <i class="fas fa-university fa-2x orange-text"></i>
+                </span>
+                <div class="media-body">
+                  <h5 class="indigo-text mb-3">Los Mejores Ambientes</h5>
+                  <p class="font-weight-light text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nostrum voluptatibus ipsum tempora similique dolores alias labore nobis maiores assumenda.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- Fin Tarjeta de Centros -->
+
+      </div>
+      <!-- Fin de Tarjetas -->
+    </div>
+    <!-- Fin Lado Derecho -->
+
+  </div>
+</section>
+
+
+<app-footer></app-footer>

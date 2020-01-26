@@ -1,7 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    // Configuracion de Alias
+    "paths": {
+      "@modelos/*": ["app/modelos/*"] 
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

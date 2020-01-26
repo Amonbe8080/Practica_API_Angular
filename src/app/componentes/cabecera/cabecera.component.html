@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-expand-lg text-white  indigo darken-2 lighten-1 fixed-top ">
+
+  <div class="container">
+
+    <!-- Si esta logeado -->
+    <ng-container *ngIf="logeado else noLogeado">
+      <a class="navbar-brand py-0 text-white decoration-none font-weight-normal" routerLink="/other"><img
+          src="https://www.stickpng.com/assets/images/584816bbcef1014c0b5e4986.png" width="50" height="50">Plax</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto font-weight-normal">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/carreras">Carrera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/centro">Instituto</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="navbar-nav ml-auto mt-auto nav-flex-icons">
+        <li class="nav-item">
+          <a class="nav-link font-weight-normal waves-effect waves-light">1
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+        <li class="nav-item avatar dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img (1).jpg" width="50" height="50"
+              class="rounded-circle" alt="avatar image">
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg-right dropdown-dark" aria-labelledby="navbarDropdownMenuLink-55">
+            <a class="dropdown-item" href="#">Mi Perfil</a>
+            <a class="dropdown-item" href="#">Salir</a>
+          </div>
+        </li>
+      </ul>
+
+    </ng-container>
+
+    <!-- Si no esta logeado -->
+    <ng-template #noLogeado>
+      <!-- Logo app -->
+      <a class="navbar-brand py-0 text-white decoration-none font-weight-normal" routerLink="/"><img
+          src="https://www.stickpng.com/assets/images/584816bbcef1014c0b5e4986.png" width="50" height="50">Plax</a>
+
+      <!-- Boton Responsive -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Opciones -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+        <ul class="navbar-nav mr-auto font-weight-normal">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/carreras">¿Que Estudiar?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/centro">¿Donde Estudiar?</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Boton derecho -->
+      <a class="nav-link" routerLink="/inscripcion"><i class="fas fa-list-alt mr-2"></i>Inscripción</a>
+      <a class="nav-link btn btn-outline-white waves-effect" routerLink="/login"><i class="fas fa-sign-in-alt mr-2"></i>Ingresar</a>  
+    </ng-template>
+    
+    
+  </div>
+  
+</nav>
+

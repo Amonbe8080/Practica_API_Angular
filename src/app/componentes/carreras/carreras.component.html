@@ -1,0 +1,50 @@
+<app-cabecera></app-cabecera>
+<div class="px-md-5 mx-md-5 text-center">
+
+    <!--Titulo Seccion -->
+    <h3 class="font-weight-bold mb-2 orange-text mt-3">Plax, brindando futuro. </h3>
+    <p class="text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit
+        esse cillum dolore eu fugiat nulla sint occaecat cupidatat non proident, sunt culpa
+        qui officia deserunt est laborum.</p>
+    <div class="row mx-auto d-block">
+
+      <!-- Si cargaron los datos -->
+      <ng-container *ngIf="cargarDatos; else newDeb">
+          <div class="col-lg-4 col-md-12 mb-lg-0 mb-4 mt-2" *ngFor="let car of carreras">
+              <div class="card hoverable">
+      
+                <!-- Imagen -->
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/{{ car.codigo_carrera }}.jpg"
+                  width="250" height="250" alt="Card image cap">
+      
+                <!-- Contenido -->
+                <div class="card-body">
+      
+                  <!-- Titulo -->
+                  <h5 class="card-title text-muted text-uppercase mt-1 mb-3 indigo-text">{{ car.nombre_carrera }} <br> <span
+                      class="badge success-color font-small"><i class="fas fa-leaf pr-2" aria-hidden="true"></i>Asignaturas (
+                      {{ car.cantidad_asignaturas }} )</span></h5>
+                  <!-- Texto -->
+                  <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus sit ad ab impedit veniam
+                    aliquam ipsam excepturi eos assumenda, soluta facilis maxime quis consequatur vel exercitationem, animi
+                    qui. Cum, doloribus.</p>
+      
+                  <a class="btn btn-info btn-md ml-0 peach-gradient" target="_blank" href="{{ car.codigo_carrera }}"
+                    role="button">Inscribirme</a>
+                </div>
+                
+              </div>
+          </div>
+      </ng-container>
+      <!-- Fin Si cargaron los datos -->
+
+      <!-- Sino cargaron los datos  -->
+      <ng-template #newDeb>
+        <app-not-content></app-not-content>
+      </ng-template>
+
+    </div>
+      
+</div>
+
+
