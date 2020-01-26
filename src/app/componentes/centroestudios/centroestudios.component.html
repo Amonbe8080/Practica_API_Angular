@@ -5,14 +5,14 @@
   <section class="magazine-section dark-grey-text">
 
     <!-- Section heading -->
-    <h3 class="text-center font-weight-bold mb-4 pb-2 orange-text">Magazine newsfeed</h3>
+    <h3 class="text-center font-weight-bold mb-4 pb-2 orange-text mt-3">Los mejores espacios para tu futuro</h3>
     <!-- Section description -->
     <p class="text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit
       esse cillum dolore eu fugiat nulla sint occaecat cupidatat non proident, sunt culpa
       qui officia deserunt est laborum.</p>
 
     <!-- Grid row -->
-    <div class="row mx-auto d-block">
+    <div class="mx-auto ">
 
       <ng-container *ngIf="cargarDatos; else newDeb">
         <!-- Centro Estudios Card -->
@@ -23,7 +23,9 @@
 
             <!-- Image -->
             <div class="view overlay rounded z-depth-2 mb-4">
-              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg" alt="Sample image">
+              <img class="img-fluid"
+                src="http://www.tublogdearquitectura.com/wp-content/uploads/2011/12/Centro-arte-Alcobendas-10.jpg"
+                alt="Sample image">
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -36,85 +38,75 @@
               <div class="col-12">
 
                 <!-- Badge -->
-                <a href="#!"><span class="badge pink"><i class="fas fa-camera pr-2"
+                <a href="#!"><span class="badge pink mr-2"><i class="fas fa-camera pr-2"
                       aria-hidden="true"></i>Adventure</span></a>
+
+                <a href="#!"><span class="badge pink mr-2"><i class="fas fa-camera pr-2"
+                      aria-hidden="true"></i>Arte</span></a>
+
+                <a href="#!"><span class="badge pink mr-2"><i class="fas fa-camera pr-2"
+                      aria-hidden="true"></i>Poesía</span></a>
+
+                <a href="#!"><span class="badge pink mr-2"><i class="fas fa-camera pr-2"
+                      aria-hidden="true"></i>Teatro</span></a>
 
               </div>
               <!-- Grid column -->
 
             </div>
             <!-- Grid row -->
-
-            <!-- Title -->
-            <div class="d-flex justify-content-between">
-              <div class="col-11 text-truncate pl-0 mb-3">
-                <a class="font-weight-bold">{{ centroE.nombre_centro_estudio }}</a>
+            <div class="text-center">
+              <!-- Title -->
+              <div class="d-flex justify-content-between">
+                <div class="col-11 text-truncate pl-0 mb-3">
+                  <a class="font-weight-bold h3">{{ centroE.nombre_centro_estudio }}</a>
+                </div>
               </div>
-              <a><i class="fas fa-angle-double-right"></i></a>
-            </div>
 
-          </div>
-          <!-- Featured news -->
+              <!-- Caracteristicas -->
+              <div class="single-news mb-3">
 
-          <!-- Small news -->
-          <div class="single-news mb-3">
+                <!-- Title -->
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a>Aulas Digitales.</a>
+                  </div>
+                </div>
 
-            <!-- Title -->
-            <div class="d-flex justify-content-between">
-              <div class="col-11 text-truncate pl-0 mb-3">
-                <a>{{ centroE.codigo_centro }}</a>
               </div>
-              <a><i class="fas fa-angle-double-right"></i></a>
-            </div>
+              <!-- Caracteristicas -->
 
-          </div>
-          <!-- Small news -->
+              <!-- Caracteristicas -->
+              <div class="single-news mb-3">
 
-          <!-- Small news -->
-          <div class="single-news mb-3">
+                <!-- Title -->
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a>Mas de 12+ ambientes de formación.</a>
+                  </div>
+                </div>
 
-            <!-- Title -->
-            <div class="d-flex justify-content-between">
-              <div class="col-11 text-truncate pl-0 mb-3">
-                <a>How to Make a Beet Cocktail?</a>
               </div>
-              <a><i class="fas fa-angle-double-right"></i></a>
-            </div>
+              <!-- Caracteristicas -->
 
-          </div>
-          <!-- Small news -->
+              <!-- Caracteristicas -->
+              <div class="single-news mb-3">
 
-          <!-- Small news -->
-          <div class="single-news mb-3">
+                <!-- Title -->
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a>Profesionales listos para brindar apoyo en tu proceso.</a>
+                  </div>
+                </div>
 
-            <!-- Title -->
-            <div class="d-flex justify-content-between">
-              <div class="col-11 text-truncate pl-0 mb-3">
-                <a>8 Sneaky Reasons You're Always Hungry.</a>
               </div>
-              <a><i class="fas fa-angle-double-right"></i></a>
+              <!-- Caracteristicas -->
+
             </div>
-
           </div>
-          <!-- Small news -->
-
-          <!-- Small news -->
-          <div class="single-news">
-
-            <!-- Title -->
-            <div class="d-flex justify-content-between">
-              <div class="col-11 text-truncate pl-0">
-                <a>5 Pressure Cooker Recipes You Need to Try.</a>
-              </div>
-              <a><i class="fas fa-angle-double-right"></i></a>
-            </div>
-
-          </div>
-          <!-- Small news -->
-
         </div>
         <!-- Centro Estudios Card -->
-      </ng-container>  
+      </ng-container>
 
       <ng-template #newDeb class="align-center">
         <app-not-content></app-not-content>
@@ -122,7 +114,7 @@
 
     </div>
     <!-- Grid row -->
-    
+
   </section>
   <!--Section: Content-->
 

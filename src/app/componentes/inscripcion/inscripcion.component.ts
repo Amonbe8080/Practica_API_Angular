@@ -44,7 +44,7 @@ export class InscripcionComponent implements OnInit {
           // Validadores Sincronos
           validators: [Validators.required, Validators.max(150), Validators.min(6), Validators.pattern('[0-9 ]*')]
         }],
-        genero: [''],
+        genero: ['M'],
         fecha_ingreso: [fecha],
         estado: ['Activo'],
         codigo_carrera: [null,[Validators.required]],
