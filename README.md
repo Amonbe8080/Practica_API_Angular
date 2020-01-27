@@ -1,6 +1,6 @@
 # Practica API - Angular
-  - Ver [Backend](https://github.com/Amonbe8080/Practica_API_Angular/tree/backend)
-  - Ver [Frontend](https://github.com/Amonbe8080/Practica_API_Angular/tree/frontend)
+  - Ver [Backend (Net Core 2.1)](https://github.com/Amonbe8080/Practica_API_Angular/tree/backend)
+  - Ver [Frontend (Angular 8)](https://github.com/Amonbe8080/Practica_API_Angular/tree/frontend) 
   
 # Prólogo :book: 
 ## Una idea y una visión al futuro :shipit:
