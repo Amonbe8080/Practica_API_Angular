@@ -3,7 +3,7 @@
   - Ver [Frontend](https://github.com/Amonbe8080/Practica_API_Angular/tree/frontend)
   
 # Prólogo :book: 
-## Una idea y una visión al futuro.
+## Una idea y una visión al futuro :shipit:
 Al pensar a que me dedicare al salir del centro de formación, me surgieron 2 inquietudes principales
 
   - ¿Cuál es el lenguaje más pedido por las empresas?
@@ -13,19 +13,19 @@ Me decidí a resolver estas inquietudes con búsquedas en Google, YouTube y [Lin
 Encontré en C# y PHP dos lenguajes de programación que me parecían fáciles debido a su sintaxis y su manera de manejar los datos, aprendí a usar PHP de manera "Monolito" con una estructura entre Controladores, vistas, recursos y C# usando Micro servicios siendo consumido desde Angular.
 
   
-# ¿Cuál es el motivo principal de este proyecto?
+# ¿Cuál es el motivo principal de este proyecto? :sparkles:
 
 Mejorar los conocimientos tratados en clase sobre Angular 8 y .NetCore 2.1
 
-# ¿Que puedes encontrar en este proyecto?
+# ¿Que puedes encontrar en este proyecto? :open_file_folder:
 
 ## Frontend
-  - Uso de **DatePipe** para la conversión a formato de fechas.
+  - Uso de **DatePipe** para la conversión a formato de fechas :date:.
   - Manejo de **rutas y componentes**.
   - Manejo de **servicios y modelos**.
-  - **Formulario reactivo** usando FormGroup, FormBuilder, Validators como librerías propias de Angular.
+  - **Formulario reactivo** :clipboard: usando FormGroup, FormBuilder, Validators como librerías propias de Angular.
   - Uso de HttpClientModule para **petición de datos** al [Backend](https://github.com/Amonbe8080/Practica_API_Angular/tree/backend).
-  - **Diseño adaptable** a móviles.
+  - **Diseño adaptable** a móviles :iphone:.
   
 ## Backend
   - Uso de **Entity Framework** y **conexión a MySql**.
